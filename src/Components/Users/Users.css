@@ -1,0 +1,13 @@
+.usersCont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.spinnerDiv {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: purple;
+}
