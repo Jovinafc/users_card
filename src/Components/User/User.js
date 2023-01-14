@@ -10,6 +10,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useStateValue } from '../../StateProvider';
 
 const User = ({ data }) => {
+  //Use state hook for like button
   const [like, setLike] = useState(false);
   const [, dispatch] = useStateValue();
 

@@ -11,6 +11,7 @@ const Users = () => {
   const [{ users, modal, user }, dispatch] = useStateValue();
 
   useEffect(() => {
+    // API Call to get array of 10 users
     axios
       .get('https://mocki.io/v1/f7ffa6d6-d795-418a-acb2-ce0aaa665ea2')
       .then((data) => {
@@ -28,11 +29,14 @@ const Users = () => {
       {users?.length > 0 ? (
         <div>
           <div className='usersCont'>
+            {/* Mapping through the user card child component */}
             {users.map((user) => (
               <User key={user.id} data={user} />
             ))}
           </div>
+          {/* Update Form Modal Component */}
           {modal && <ModalCont modal={modal} user={user} />}
+          {/* Delete Modal Component */}
           <Delete />
         </div>
       ) : (
